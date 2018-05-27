@@ -13,10 +13,10 @@ import os
 def download_tweets(file_name, query, n_tweets, since_date):
     
     # Add the credentials of your Twitter application
-    consumer_key = ''
-    consumer_secret = ''
-    access_token = '-'
-    access_token_secret = ''
+    consumer_key = 'Zac59U9X1ZI6pK0qKeFOo74lI'
+    consumer_secret = 'cy4flchx8B76J89UPPLRTUXf2pxZ9t5KrVChKB6IkFePN8DPLU'
+    access_token = '849881311078699009-BfPz0KInd9fl4u4XYg568zJuYYId2mY'
+    access_token_secret = 'MPVW3HH99hT31lPYH3EHdIUbBNwUFrAEw3Woz4axsJf9M'
     
     auth = tweepy.AppAuthHandler(consumer_key, consumer_secret)
     # auth.set_access_token(access_token, access_token_secret)
@@ -39,8 +39,11 @@ def download_tweets(file_name, query, n_tweets, since_date):
                 
                 for tweet in new_tweets:
                     writer.writerow([tweet.text.encode('utf-8')])
-                    cnt += len(new_tweets)
-                    print("Current tweets downloaded",cnt)
+                   
+                    
+                cnt += len(new_tweets)
+                print("Current tweets downloaded",cnt)
+
                     
             except tweepy.TweepError as e:
                 print("Error:",str(e))
