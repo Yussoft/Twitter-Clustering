@@ -10,13 +10,13 @@ import csv
 import pandas as pd
 import os
 
-def download_tweets(file_name, query, n_tweets, since_date):
+def download_tweets(file_name, query, n_tweets):
     
     # Add the credentials of your Twitter application
-    consumer_key = 'Zac59U9X1ZI6pK0qKeFOo74lI'
-    consumer_secret = 'cy4flchx8B76J89UPPLRTUXf2pxZ9t5KrVChKB6IkFePN8DPLU'
-    access_token = '849881311078699009-BfPz0KInd9fl4u4XYg568zJuYYId2mY'
-    access_token_secret = 'MPVW3HH99hT31lPYH3EHdIUbBNwUFrAEw3Woz4axsJf9M'
+    consumer_key = ''
+    consumer_secret = ''
+    access_token = '-'
+    access_token_secret = ''
     
     auth = tweepy.AppAuthHandler(consumer_key, consumer_secret)
     # auth.set_access_token(access_token, access_token_secret)
@@ -54,13 +54,12 @@ def download_tweets(file_name, query, n_tweets, since_date):
 os.chdir("C://Users//Yus//Desktop")
 
 # Set params of the query
-query = "#AvengersInfinityWar"
+query = "#Venom"
 tweets = 5000
-file = "avengers_nuevo_tweets.csv"
-since_date = "2018-04-01"
+file = "venom_tweets.csv"
 
 # Download tweets
-download_tweets(file, query, tweets, since_date)
+download_tweets(file, query, tweets)
 
 
 
